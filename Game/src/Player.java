@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class git Player {
+public class Player {
     private int health;
     private int damage;
     private int money;
@@ -17,8 +17,8 @@ public class git Player {
 
         for (GameCharacter gameCharacter : charList) {
 
-            System.out.println("----------------------------------------------------------------------------");
-            // Hardcoded (elle yazılmış) değerler yerine sınıftaki gerçek değerleri çeken metotlar eklendi
+            System.out.println("-------------------------------------------------------------m -------------------");
+
 
             System.out.println("ID "+ gameCharacter.getID()+
                     "\t Karakter: " + gameCharacter.getName() +
