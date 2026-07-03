@@ -1,4 +1,15 @@
-package PACKAGE_NAME;
+public class NormalLocation extends Location{
+    public NormalLocation(Player player,String  locationName){
+        super(player,locationName);
+    }
 
-public class NormalLocation {
+    @Override
+    boolean onLocaiton(){
+        return false;
+    }
+
+
+
+
+
 }

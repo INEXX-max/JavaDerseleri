@@ -5,9 +5,11 @@ public class Player {
     private int money;
     private String charName;
     private String playerName;
+    Scanner input = new Scanner(System.in);
 
-    public Player(String name) {
-        this.playerName = name;
+    public Player(String playerName) {
+
+        this.playerName = playerName;
     }
 
     public void selectChar() {
@@ -29,9 +31,9 @@ public class Player {
 
         System.out.println("------------------------------");
         System.out.println("Lütfen Bir Karakter girniz..");
-        System.out.println("Lütfeen Karakterini Seç ");
+        System.out.println("Lütfeen Karakterini Seç : ");
 
-        int selecetChar =input.nextInt();
+
 
         int selectChar = input.nextInt(); // 'selecet' kelimesi 'select' olarak düzeltildi
         switch(selectChar) {
@@ -44,12 +46,21 @@ public class Player {
             case 3:
                 initPlayer(new Knight());
                 break;
+            case  4:
+                initPlayer(new Test());
+                break;
             default:
                 initPlayer(new Samurai());
 
         }
-        System.out.println("Karakter :"+this.getCharName()+"Hasae :"+this.getDamage()+"Sağlık"+this.getHealth()+"Parası :"+this.getMoney());
+        System.out.println("Karakter : "+this.getCharName()+"Hasar  :"+this.getDamage()+" Sağlık : "+this.getHealth()+"Parası :"+this.getMoney());
     }
+
+
+
+
+
+
     public void initPlayer(GameCharacter gameChar){
         this.setDamage(gameChar.getDamage());
         this.setHealth(gameChar.getHealth());
@@ -64,7 +75,7 @@ public class Player {
     }
 
     public void setHealth(int health) {
-        this.health = health;
+      this.health = health;
     }
 
     // getDamage metodundaki 'return health' hatası düzeltildi

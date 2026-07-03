@@ -44,7 +44,6 @@ public class GameCharacter {
     public void setMoney(int money){
         this.money=money;
     }
-
     public int getHealth (){
         return health;
     }
